@@ -1,24 +1,25 @@
 
 import React, { useState } from 'react';
-import { EXPERT_INFO, IMAGES } from './constants';
-import { WhatsAppButton } from './components/Button';
-import { Lightbox } from './components/Lightbox';
+import { EXPERT_INFO, IMAGES } from './constants.ts';
+import { WhatsAppButton } from './components/Button.tsx';
+import { Lightbox } from './components/Lightbox.tsx';
 
 const App: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
     <main className="min-h-screen">
-      {/* 1. HERO - Layout Original do pedido de "foto ao lado" */}
+      {/* 1. HERO - Layout: Foto ao lado da Headline no Desktop */}
       <section className="relative min-h-[90vh] md:min-h-[85vh] flex items-center bg-gradient-to-b from-[#e7e1d5] to-[#fafafa] overflow-hidden pt-12 pb-10">
         <div className="container mx-auto px-6 z-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+            
             {/* Lado do Texto */}
             <div className="w-full md:w-3/5 text-center md:text-left order-2 md:order-1">
               <h1 className="text-4xl md:text-6xl font-bold text-gray-800 leading-tight mb-6">
                 Olá, eu sou <span className="text-[#a68a56]">Jessika Dayanna</span>, sua dentista em Natal.
               </h1>
-              <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
+              <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed">
                 Transformo sorrisos através de um atendimento humanizado, focado na sua saúde e autoestima. O cuidado que você merece, do jeito que você sempre sonhou.
               </p>
               <div className="flex justify-center md:justify-start">
@@ -37,6 +38,7 @@ const App: React.FC = () => {
                 />
               </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -126,8 +128,8 @@ const App: React.FC = () => {
               </div>
             </div>
           </div>
-          <p className="text-center text-gray-400 text-sm mt-12">
-            *Resultados podem variar de pessoa para pessoa.
+          <p className="text-center text-gray-400 text-sm mt-12 italic">
+            *Resultados podem variar de pessoa para pessoa conforme cada caso clínico.
           </p>
         </div>
       </section>
